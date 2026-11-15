@@ -1,0 +1,128 @@
+HALLUCINATION DETECTION IN LARGE LANGUAGE MODELS
+
+1. What is Hallucination?
+
+Hallucination occurs when a Large Language Model generates information that is false, fabricated, misleading, or unsupported by available evidence.
+
+The generated response may sound confident and convincing even when the information is incorrect.
+
+Example:
+
+Question: Who invented the telephone?
+
+Correct answer: Alexander Graham Bell is commonly credited with inventing the first practical telephone.
+
+Hallucinated answer: Albert Einstein invented the telephone.
+
+2. Why Do LLMs Generate Hallucinations?
+
+Common reasons include:
+
+- Insufficient training data.
+- Outdated or incomplete knowledge.
+- Ambiguous user questions.
+- Incorrect patterns learned during training.
+- Lack of reliable reference information.
+- Model generating plausible text without verifying facts.
+- Incorrect or irrelevant retrieved context in RAG systems.
+
+3. Types of Hallucinations
+
+A. Factual Hallucination:
+The model generates information that contradicts established facts.
+
+Example: Giving an incorrect historical date.
+
+B. Fabricated Information:
+The model invents names, references, statistics, events, or sources.
+
+Example: Creating a research paper citation that does not exist.
+
+C. Contextual Hallucination:
+The response contradicts the information provided in the reference context.
+
+D. Unsupported Claims:
+The model makes claims that are not supported by the available evidence.
+
+4. Hallucination Detection Techniques
+
+A. Reference-Based Verification:
+Compare the AI-generated response with a trusted reference answer or source document.
+
+B. Retrieval-Augmented Verification:
+Retrieve relevant information from a knowledge base and compare the generated claims with the retrieved evidence.
+
+C. Fact Checking:
+Break the response into individual factual claims and verify each claim against reliable sources.
+
+D. Natural Language Inference (NLI):
+Use an inference model to determine whether the reference context supports, contradicts, or is unrelated to a generated claim.
+
+E. LLM-as-a-Judge:
+Use an evaluation language model to inspect the response and identify potentially false or unsupported statements.
+
+5. Hallucination in RAG Systems
+
+Retrieval-Augmented Generation combines external knowledge retrieval with language generation.
+
+RAG can reduce hallucinations by providing relevant evidence to the language model.
+
+However, hallucinations can still occur when:
+
+- The retrieved documents are irrelevant.
+- The knowledge base does not contain the correct information.
+- The model misunderstands the retrieved context.
+- The generated answer introduces unsupported details.
+
+6. Important Hallucination Evaluation Terms
+
+Groundedness:
+Measures whether generated statements are supported by the provided context.
+
+Faithfulness:
+Measures whether the response accurately represents the retrieved information without introducing unsupported claims.
+
+Factual Correctness:
+Measures whether the response agrees with reliable real-world information.
+
+Evidence:
+Information from trusted documents or sources used to verify a claim.
+
+7. Hallucination Scoring
+
+A simple project scoring scale can be:
+
+5 - No hallucination detected; claims are well supported.
+4 - Mostly supported; minor uncertainty.
+3 - Some claims lack sufficient evidence.
+2 - Several unsupported or questionable claims.
+1 - Major factual errors or fabricated information.
+
+The score is an evaluation judgment, not a mathematical guarantee.
+
+8. Hallucination Detection Agent in This Project
+
+The Hallucination Detection Agent is responsible for examining AI-generated responses and identifying false or unsupported claims.
+
+Its responsibilities include:
+
+- Extracting factual claims from the response.
+- Comparing claims with retrieved reference context.
+- Identifying contradictions.
+- Identifying unsupported statements.
+- Assigning a hallucination score.
+- Providing evidence and explanations for its judgment.
+
+9. Limitations of Hallucination Detection
+
+- Reliable reference information may not be available.
+- Some claims are difficult to verify automatically.
+- Retrieved information may itself be incorrect.
+- Different sources may disagree.
+- An evaluation model may fail to recognize subtle errors.
+
+When evidence is insufficient, the system should report uncertainty rather than automatically labeling a claim as false.
+
+10. Conclusion
+
+Hallucination detection is an important part of reliable AI evaluation. Combining reference-based verification, retrieval, fact checking, and language-model evaluation can help identify misleading or unsupported AI-generated information.

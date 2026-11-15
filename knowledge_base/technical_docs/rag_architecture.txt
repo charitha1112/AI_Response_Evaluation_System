@@ -1,0 +1,166 @@
+RETRIEVAL-AUGMENTED GENERATION (RAG) ARCHITECTURE
+
+1. What is RAG?
+
+Retrieval-Augmented Generation (RAG) is an AI architecture that combines information retrieval with Large Language Model generation.
+
+It allows an LLM to retrieve relevant information from an external knowledge source before generating an answer.
+
+RAG helps provide more contextually relevant and evidence-supported responses.
+
+2. Why is RAG Used?
+
+- Provides additional information to LLMs.
+- Reduces dependence on training data alone.
+- Helps answer questions using external documents.
+- Improves the availability of up-to-date information.
+- Supports evidence-based response generation.
+- Can reduce hallucinations when relevant and reliable context is retrieved.
+
+3. Main Components of RAG
+
+A. Document Ingestion:
+Collects documents from sources such as text files, PDFs, datasets, and web pages.
+
+B. Text Preprocessing:
+Cleans the documents by removing unnecessary spaces, unwanted characters, and formatting problems.
+
+C. Chunking:
+Divides large documents into smaller text sections called chunks.
+
+D. Embedding Generation:
+Converts text chunks into numerical vectors that represent their semantic meaning.
+
+E. Vector Database:
+Stores embeddings and associated text for efficient similarity-based retrieval.
+
+F. Retriever:
+Searches the vector database to identify information relevant to the user's query.
+
+G. Context Augmentation:
+Combines the retrieved information with the original question.
+
+H. Language Model:
+Uses the question and retrieved context to generate a response.
+
+4. What are Embeddings?
+
+Embeddings are numerical representations of text, images, or other data.
+
+Text embeddings represent semantic meaning in a vector format.
+
+Texts with similar meanings generally have embeddings that are close to each other in vector space.
+
+Embeddings enable semantic search rather than relying only on exact keyword matches.
+
+5. What is Chunking?
+
+Chunking is the process of dividing large documents into smaller, manageable text sections.
+
+Why chunking is important:
+
+- Makes retrieval more efficient.
+- Helps identify relevant information.
+- Reduces unnecessary context.
+- Makes it easier to process large documents.
+
+Chunk Size:
+The amount of text contained in each chunk.
+
+Chunk Overlap:
+The amount of text shared between consecutive chunks.
+
+Overlap helps preserve context across chunk boundaries.
+
+6. What is a Vector Database?
+
+A vector database stores and searches numerical vector representations called embeddings.
+
+It enables efficient similarity searches.
+
+Examples:
+- ChromaDB
+- FAISS
+- Pinecone
+- Weaviate
+- Milvus
+
+7. Semantic Search
+
+Semantic search identifies information based on meaning rather than exact word matching.
+
+Example:
+
+Query: How do computers learn from data?
+
+A semantic search system may retrieve a document about Machine Learning even if the exact words in the query do not appear in the document.
+
+8. Similarity and Distance
+
+Vector search compares query embeddings with stored document embeddings.
+
+Common comparison methods include:
+
+Cosine Similarity:
+Measures the angle-based similarity between two vectors.
+
+Euclidean Distance:
+Measures the straight-line distance between two vectors.
+
+L2 Distance:
+Another name commonly used for Euclidean distance.
+
+In distance-based retrieval, a smaller distance generally indicates a closer match.
+
+Distance values should not be interpreted directly as percentages.
+
+9. RAG Workflow
+
+Step 1: Collect reference documents.
+Step 2: Clean and preprocess the documents.
+Step 3: Divide documents into chunks.
+Step 4: Generate embeddings for the chunks.
+Step 5: Store embeddings in a vector database.
+Step 6: Receive a user query.
+Step 7: Generate an embedding for the query.
+Step 8: Retrieve the most relevant chunks.
+Step 9: Pass the retrieved context to the language model.
+Step 10: Generate a response using the question and context.
+
+10. RAG Evaluation
+
+A RAG system should be evaluated using multiple dimensions:
+
+- Context Precision: Checks whether retrieved information is relevant.
+- Context Recall: Checks whether important reference information is retrieved.
+- Faithfulness: Checks whether the generated answer is supported by retrieved context.
+- Answer Relevancy: Checks whether the answer addresses the question.
+- Factual Correctness: Checks whether the answer is factually correct.
+
+11. RAG in This Project
+
+The AI Evaluation System uses retrieval to obtain supporting information for evaluating AI-generated responses.
+
+The retrieval process includes:
+
+- Loading technical reference documents.
+- Preprocessing and chunking the documents.
+- Generating embeddings.
+- Storing embeddings in ChromaDB.
+- Retrieving relevant context based on a question or response.
+- Providing evidence to evaluation agents.
+
+The retrieved context helps evaluation agents assess accuracy, faithfulness, and hallucinations.
+
+12. Limitations of RAG
+
+- Retrieval may return irrelevant information.
+- Important information may not be retrieved.
+- Poor chunking can reduce retrieval quality.
+- Embedding models may not capture every meaning accurately.
+- Retrieved documents may contain incorrect information.
+- RAG does not guarantee hallucination-free answers.
+
+13. Conclusion
+
+RAG combines information retrieval and language generation to provide responses supported by external knowledge. Effective preprocessing, chunking, embeddings, vector storage, and retrieval are essential for building a reliable RAG system.
