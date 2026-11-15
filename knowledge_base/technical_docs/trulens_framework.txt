@@ -1,0 +1,144 @@
+TRULENS FRAMEWORK FOR LLM AND RAG EVALUATION
+
+1. What is TruLens?
+
+TruLens is an open-source framework used to evaluate, monitor, and track the performance of AI applications, including Large Language Model applications and Retrieval-Augmented Generation systems.
+
+It provides evaluation methods called feedback functions to assess different aspects of AI application quality.
+
+2. Why is TruLens Used?
+
+- Evaluates LLM applications.
+- Measures the quality of RAG systems.
+- Helps identify weaknesses in retrieval and generation.
+- Provides feedback-based evaluation.
+- Supports monitoring and tracking application performance.
+- Helps improve the reliability of AI applications.
+
+3. The RAG Triad
+
+TruLens introduces three important evaluation dimensions for RAG systems.
+
+A. Context Relevance:
+
+Measures whether the retrieved context is relevant to the user's question.
+
+Example:
+Question: What is Machine Learning?
+
+Relevant context: Machine Learning enables computers to learn from data.
+
+Irrelevant context: Information about cooking recipes.
+
+B. Groundedness:
+
+Measures whether the generated response is supported by the retrieved context.
+
+A grounded response should not introduce unsupported claims.
+
+C. Answer Relevance:
+
+Measures whether the generated answer directly addresses the user's question.
+
+A relevant answer should provide useful information related to the question.
+
+4. How TruLens Evaluation Works
+
+Step 1: Build an AI application or RAG pipeline.
+
+Step 2: Define evaluation criteria.
+
+Step 3: Configure feedback functions.
+
+Step 4: Run the application with test questions.
+
+Step 5: Evaluate retrieved context and generated answers.
+
+Step 6: Collect evaluation scores and feedback.
+
+Step 7: Analyze results and improve the application.
+
+5. Feedback Functions
+
+Feedback functions are evaluation mechanisms used to measure the quality of AI application outputs.
+
+Examples:
+
+- Context relevance feedback.
+- Groundedness feedback.
+- Answer relevance feedback.
+
+These functions can use language models or other evaluation methods.
+
+6. TruLens and RAG Evaluation
+
+TruLens uses the RAG Triad to evaluate three important parts of a RAG application:
+
+- Retrieval: Is the retrieved context relevant?
+- Grounding: Is the generated response supported by the context?
+- Generation: Does the answer address the user's question?
+
+7. Example of TruLens Evaluation
+
+Question:
+What is Artificial Intelligence?
+
+Retrieved Context:
+Artificial Intelligence is a field of computer science that focuses on creating systems capable of performing tasks that normally require human intelligence.
+
+Generated Answer:
+Artificial Intelligence enables machines to perform tasks such as learning, reasoning, and problem-solving.
+
+Possible evaluation:
+
+Context Relevance:
+The retrieved context is relevant to the question.
+
+Groundedness:
+The generated answer is supported by the retrieved context.
+
+Answer Relevance:
+The generated answer directly addresses the question.
+
+8. Advantages of TruLens
+
+- Provides structured evaluation methods.
+- Supports RAG application evaluation.
+- Helps identify retrieval and generation issues.
+- Supports feedback-based assessment.
+- Helps developers monitor AI application quality.
+
+9. Limitations of TruLens
+
+- Some feedback functions depend on language models.
+- Evaluation results may vary based on the selected model.
+- Incorrect reference information can affect evaluation.
+- Feedback scores require careful interpretation.
+- It does not guarantee that all hallucinations will be detected.
+
+10. TruLens in This Project
+
+TruLens provides useful concepts for designing the AI Evaluation System.
+
+The project can use the RAG Triad to support:
+
+- Relevance Judge Agent: Evaluates whether the response and retrieved context are relevant.
+- Accuracy Judge Agent: Checks factual correctness using supporting evidence.
+- Hallucination Detection Agent: Checks whether claims are supported by available context.
+- Completeness Judge Agent: Checks whether the answer covers the important information.
+
+The Evaluation Orchestrator coordinates the evaluation process.
+
+11. RAGAS vs TruLens
+
+RAGAS:
+Focuses on evaluating RAG systems using metrics such as faithfulness, answer relevancy, context precision, and context recall.
+
+TruLens:
+Focuses on evaluating and tracking AI applications using feedback functions and the RAG Triad.
+
+Both frameworks can help improve the quality and reliability of RAG applications.
+
+12. Conclusion
+
+TruLens is a useful framework for evaluating LLM and RAG applications. Its RAG Triad of context relevance, groundedness, and answer relevance provides a structured approach to assessing retrieval and generation quality.

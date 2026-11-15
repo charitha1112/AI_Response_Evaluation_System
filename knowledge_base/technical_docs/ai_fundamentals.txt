@@ -1,0 +1,121 @@
+ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING FUNDAMENTALS
+
+1. Artificial Intelligence (AI)
+
+Artificial Intelligence is a branch of computer science that focuses on creating machines and software capable of performing tasks that normally require human intelligence.
+
+These tasks include learning, reasoning, problem-solving, decision-making, language understanding, and image recognition.
+
+Examples:
+- Virtual assistants
+- Chatbots
+- Self-driving vehicles
+- Recommendation systems
+- Facial recognition
+
+2. Machine Learning (ML)
+
+Machine Learning is a subset of Artificial Intelligence that enables computers to learn patterns from data and make predictions or decisions without being explicitly programmed for every task.
+
+Types of Machine Learning:
+
+a) Supervised Learning:
+The model learns from labeled training data.
+Examples: Spam detection, house price prediction.
+
+b) Unsupervised Learning:
+The model identifies patterns in unlabeled data.
+Examples: Customer segmentation, clustering.
+
+c) Reinforcement Learning:
+An agent learns by interacting with an environment and receiving rewards or penalties.
+Examples: Game-playing agents and robotics.
+
+3. Deep Learning (DL)
+
+Deep Learning is a subset of Machine Learning that uses neural networks with multiple layers to learn complex patterns from large amounts of data.
+
+Applications:
+- Image recognition
+- Speech recognition
+- Natural language processing
+- Autonomous driving
+
+4. Neural Networks
+
+A neural network is a machine learning model inspired by the structure of the human brain. It consists of interconnected units called neurons arranged in layers.
+
+Main layers:
+- Input layer: Receives data.
+- Hidden layers: Process information and learn patterns.
+- Output layer: Produces predictions or results.
+
+5. Natural Language Processing (NLP)
+
+NLP is a field of Artificial Intelligence that enables computers to understand, interpret, and generate human language.
+
+Applications:
+- Language translation
+- Sentiment analysis
+- Text summarization
+- Chatbots
+- Speech recognition
+
+6. Generative Artificial Intelligence
+
+Generative AI refers to AI systems that generate new content such as text, images, audio, video, or code based on patterns learned from training data.
+
+Examples:
+- Text generation
+- Image generation
+- Code generation
+- Conversational assistants
+
+7. Difference Between AI, ML, and DL
+
+Artificial Intelligence is the broad field of creating intelligent machines.
+Machine Learning is a subset of AI that learns from data.
+Deep Learning is a subset of ML that uses multi-layer neural networks.
+
+Relationship:
+AI contains ML, and ML contains DL.
+
+8. Applications of AI and ML
+
+- Healthcare: Disease prediction and medical image analysis.
+- Education: Personalized learning.
+- Banking: Fraud detection.
+- Agriculture: Crop monitoring and prediction.
+- Transportation: Traffic prediction and autonomous vehicles.
+- Business: Recommendation systems and customer analysis.
+
+9. Important Terms
+
+Dataset: A collection of data used for training, validation, or testing.
+
+Training: The process of teaching a model using data.
+
+Model: A learned mathematical representation used to make predictions or generate outputs.
+
+Prediction: An output produced by a trained model.
+
+Accuracy: The proportion of predictions that are correct.
+
+Overfitting: When a model learns training data too closely and performs poorly on unseen data.
+
+Generalization: The ability of a model to perform well on new, unseen data.
+
+10. Importance of AI Evaluation
+
+AI evaluation measures how well an AI system performs.
+
+Important evaluation criteria include:
+- Accuracy
+- Reliability
+- Relevance
+- Fairness
+- Robustness
+- Completeness
+- Factual correctness
+
+AI evaluation helps identify incorrect, misleading, biased, or unreliable outputs.
