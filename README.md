@@ -15,18 +15,19 @@ It uses a modular architecture with multiple evaluation agents and a Retrieval-A
 - Retrieve relevant information from a knowledge base.
 - Generate an overall evaluation score and verdict.
 
-3. Technology Stack
+## 3. Technology Stack
 
-Component| Technology
-Programming Language| Python 3.11
-Frontend| Streamlit
-Backend| FastAPI
-Data Validation| Pydantic
-Vector Database| ChromaDB
-Embeddings| ChromaDB Default Embedding Function
-Datasets| TruthfulQA and SQuAD
-Development Tool| Visual Studio Code
-Version Control| Git and GitHub
+| Component | Technology |
+|---|---|
+| Programming Language | Python 3.11 |
+| Frontend | Streamlit |
+| Backend | FastAPI |
+| Data Validation | Pydantic |
+| Vector Database | ChromaDB |
+| Embeddings | ChromaDB Default Embedding Function |
+| Datasets | TruthfulQA and SQuAD |
+| Development Tool | Visual Studio Code |
+| Version Control | Git and GitHub |
 
 4. System Modules
 
@@ -64,12 +65,17 @@ User Input → Streamlit Frontend → FastAPI Backend → Evaluation Orchestrato
 The knowledge base provides relevant reference context through semantic retrieval.
 
 7. Project Folder Structure
+## 4. Project Folder Structure
 
+```text
 AI RESPONSE/
+│
 ├── frontend/
 │   └── app.py
+│
 ├── backend/
 │   └── api.py
+│
 ├── agents/
 │   ├── orchestrator.py
 │   ├── relevance_agent.py
@@ -77,6 +83,7 @@ AI RESPONSE/
 │   ├── hallucination_agent.py
 │   ├── completeness_agent.py
 │   └── verdict_agent.py
+│
 ├── knowledge_base/
 │   ├── dataset_loader.py
 │   ├── preprocessing.py
@@ -84,10 +91,16 @@ AI RESPONSE/
 │   ├── embeddings.py
 │   ├── vector_store.py
 │   ├── retrieval.py
-│   └── data/
+│   ├── hybrid_search.py
+│   ├── technical_ingestion.py
+│   ├── data/
+│   └── technical_docs/
+│
 ├── docs/
+│
 ├── requirements.txt
-└── README.md
+├── README.md
+└── .gitignore
 
 8. Installation and Execution
 
