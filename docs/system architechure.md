@@ -288,3 +288,83 @@ Future Enhancements
 The AI Response Evaluation System provides a modular baseline for evaluating AI-generated responses. The frontend, backend, evaluation agents, and verdict-generation workflow form the initial working prototype.
 
 The knowledge-base pipeline provides a foundation for future semantic retrieval and evidence-based evaluation.
+# MILESTONE 2 – SYSTEM ARCHITECTURE AND WORKFLOW
+
+## 1. Overview
+
+The AI Response Evaluation System uses a multi-agent architecture to evaluate AI-generated responses based on relevance, accuracy, hallucination, and completeness.
+
+Gemini API is used as the semantic evaluation engine, while ChromaDB provides supporting knowledge for evidence-based evaluation.
+
+## 2. System Architecture
+
+The system consists of the following components:
+
+1. User Input Module
+2. Knowledge Base and Retrieval Module
+3. Gemini Evaluation Engine
+4. Relevance Agent
+5. Accuracy Agent
+6. Hallucination Agent
+7. Completeness Agent
+8. Orchestrator
+9. Weighted Scoring and Verdict Module
+10. Result Display Module
+
+## 3. Evaluation Workflow
+
+1. The user enters a question and AI-generated response.
+2. An optional reference answer or source document can be provided.
+3. If reference information is not provided, the system retrieves relevant context from ChromaDB.
+4. The retrieved context and input are passed to the Gemini evaluation engine.
+5. Four evaluation agents assess the response.
+6. Each agent generates a score, reasoning, and supporting evidence.
+7. The Orchestrator collects the evaluation results.
+8. The weighted scoring mechanism calculates the final score.
+9. The final verdict and individual agent results are displayed through Streamlit.
+
+## 4. Agent Responsibilities
+
+### Relevance Agent
+Evaluates whether the AI response directly addresses the given question.
+
+### Accuracy Agent
+Checks the factual correctness of the response using reference information or retrieved knowledge.
+
+### Hallucination Agent
+Identifies unsupported or fabricated claims in the AI response.
+
+### Completeness Agent
+Evaluates whether the response contains sufficient information to answer the question.
+
+## 5. Weighted Scoring Mechanism
+
+The final evaluation score is calculated using the following weights:
+
+| Evaluation Agent | Weight |
+|---|---:|
+| Relevance | 25% |
+| Accuracy | 35% |
+| Hallucination | 25% |
+| Completeness | 15% |
+
+Final Score = 
+(Relevance × 0.25) +
+(Accuracy × 0.35) +
+(Hallucination × 0.25) +
+(Completeness × 0.15)
+
+## 6. Output
+
+The system displays:
+
+- Individual agent scores
+- Agent evaluation categories
+- Reasoning for each evaluation
+- Supporting evidence when available
+- Overall weighted score
+- Final evaluation verdict
+
+## 7. Conclusion
+
+The multi-agent architecture enables systematic evaluation of AI-generated responses. Gemini provides semantic evaluation, ChromaDB supports evidence retrieval, and the Orchestrator combines the results to generate an overall evaluation.

@@ -142,3 +142,56 @@ The following components have been implemented:
 11. Expected Outcome
 
 The system aims to provide structured evaluation results that help assess the quality and reliability of AI-generated responses.
+# Milestone 2 – AI Response Evaluation
+
+## Overview
+
+Milestone 2 enhances the AI Response Evaluation System using a multi-agent evaluation approach powered by the Gemini API.
+
+## Implemented Features
+
+- Semantic evaluation using Gemini API.
+- Relevance Agent for checking question-response relevance.
+- Accuracy Agent for evaluating factual correctness.
+- Hallucination Agent for detecting unsupported claims.
+- Completeness Agent for checking missing information.
+- Orchestrator for coordinating evaluation agents.
+- Weighted scoring mechanism.
+- Final verdict generation.
+- Knowledge retrieval using ChromaDB.
+- Evaluation with or without a reference answer.
+- Support for short and one-word answers.
+
+## Evaluation Metrics
+
+| Agent | Weight |
+|---|---:|
+| Relevance | 25% |
+| Accuracy | 35% |
+| Hallucination | 25% |
+| Completeness | 15% |
+
+## Testing
+
+The system was tested using different response scenarios:
+
+1. Correct answers.
+2. Partially correct answers.
+3. Incorrect answers.
+4. Irrelevant answers.
+5. Unsupported claims.
+6. Evaluation without reference answers.
+7. One-word answers.
+
+## Technologies Used
+
+- Python
+- Streamlit
+- FastAPI
+- Gemini API
+- ChromaDB
+- Pydantic
+
+## Result
+
+The system generates individual agent scores, evaluation reasoning, supporting evidence when available, and an overall weighted evaluation score.
